@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute -left-24 top-1/4 -z-10 h-80 w-80 rounded-full bg-fuchsia-500/15 blur-[110px]" />
       <div className="pointer-events-none absolute bottom-10 right-10 -z-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-[110px]" />
 
-      <section className="relative mx-auto grid min-h-screen max-w-[1600px] grid-cols-1 items-center gap-4 px-6 pb-16 pt-14 sm:px-10 lg:grid-cols-2 lg:px-16">
+      <section className="relative mx-auto grid min-h-screen max-w-[1600px] grid-cols-1 items-center gap-4 px-5 pb-16 pt-14 sm:px-10 lg:grid-cols-2 lg:px-16">
         {/* Bagian kiri: judul dan deskripsi */}
         <div className="hero-title-enter relative z-20 order-2 max-w-2xl self-center pb-10 lg:order-1 lg:pb-0">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-4 py-2 text-[10px] tracking-[0.28em] text-white/80 shadow-lg backdrop-blur-md sm:text-xs">
@@ -87,13 +87,25 @@ export default function HeroSection() {
 
         {/* Bagian kanan: karakter dan roulette */}
         <div className="character-enter relative z-10 order-1 flex h-[390px] w-full items-end justify-center sm:h-[520px] lg:order-2 lg:h-[min(88vh,850px)]">
-          {/* Karakter: digeser ke kanan khusus layar HP */}
+          {/* Karakter: posisi responsif */}
           <div className="relative h-full w-full max-w-[650px] translate-x-6 sm:translate-x-0">
             <HeroCharacter />
           </div>
 
-          {/* Roulette navigasi di atas tangan karakter */}
-          <div className="roulette-enter absolute left-[60%] top-[30%] z-30 w-[min(92vw,440px)] -translate-x-1/2 sm:top-[32%] lg:top-[15%]">
+          {/* Roulette: posisi terpisah sesuai ukuran layar */}
+          <div
+            className="
+              roulette-enter
+              absolute z-30
+              left-[66%] top-[23%]
+              w-[min(85vw,360px)]
+              -translate-x-1/2
+              sm:left-[60%] sm:top-[32%]
+              sm:w-[min(92vw,440px)]
+              lg:left-[60%] lg:top-[15%]
+              lg:w-[min(92%,440px)]
+            "
+          >
             <LearningRoulette />
           </div>
         </div>
