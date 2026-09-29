@@ -97,10 +97,10 @@ export default function HeroSection() {
             className="
               roulette-enter
               absolute z-30
-              left-[66%] top-[23%]
+              left-[80%] top-[11%]
               w-[min(85vw,360px)]
               -translate-x-1/2
-              sm:left-[60%] sm:top-[32%]
+              sm:left-[65%] sm:top-[32%]
               sm:w-[min(92vw,440px)]
               lg:left-[60%] lg:top-[15%]
               lg:w-[min(92%,440px)]
