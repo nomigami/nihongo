@@ -71,15 +71,13 @@ export default function HeroSection() {
             yang interaktif.
           </p>
 
-          {/* Tombol menuju halaman yang dipilih di roulette */}
-
-         {/* Tombol mulai belajar */}
-         <a
-          href="/hiragana"
-          className="mt-8 inline-flex items-center gap-3 rounded-full border border-pink-200/50 bg-pink-300/15 px-7 py-3 text-xs font-semibold tracking-[0.16em] text-white shadow-[0_0_35px_rgba(244,114,182,0.16)] backdrop-blur-md transition duration-300 hover:scale-105 hover:bg-pink-300/25 sm:text-sm"
+          {/* Tombol mulai belajar */}
+          <a
+            href="/hiragana"
+            className="mt-8 inline-flex items-center gap-3 rounded-full border border-pink-200/50 bg-pink-300/15 px-7 py-3 text-xs font-semibold tracking-[0.16em] text-white shadow-[0_0_35px_rgba(244,114,182,0.16)] backdrop-blur-md transition duration-300 hover:scale-105 hover:bg-pink-300/25 sm:text-sm"
           >
-          MULAI BELAJAR
-          <ChevronRight className="h-4 w-4" />
+            MULAI BELAJAR
+            <ChevronRight className="h-4 w-4" />
           </a>
 
           <p className="mt-5 text-xs tracking-[0.18em] text-white/45">
@@ -87,9 +85,10 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* Bagian kanan: karakter dan roulette di atas tangan */}
+        {/* Bagian kanan: karakter dan roulette */}
         <div className="character-enter relative z-10 order-1 flex h-[390px] w-full items-end justify-center sm:h-[520px] lg:order-2 lg:h-[min(88vh,850px)]">
-          <div className="relative h-full w-full max-w-[650px]">
+          {/* Karakter: digeser ke kanan khusus layar HP */}
+          <div className="relative h-full w-full max-w-[650px] translate-x-6 sm:translate-x-0">
             <HeroCharacter />
           </div>
 
